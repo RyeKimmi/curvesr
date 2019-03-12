@@ -10,15 +10,15 @@ def add_circle( points, cx, cy, cz, r, step ):
 
 def add_curve( points, x0, y0, x1, y1, x2, y2, x3, y3, step, curve_type ):
     t = 0
-    if curve_type = 'Bezier':
+    if curve_type == 'Bezier':
         while t < 1:
-            x =
-            y =
-            (1-t)^3*P0 + 3(1-t)^2tP1 + 3(1-t)*t^2P2 + t^3P3
-            add_point( points, x, y )
+            m = matrix_mult( make_bezier(), [[x0, x1, x2, x3], [y0, y1, y2, y3]] )
+            print_matrix( make_bezier() )
+            #add_point( points, x, y )
             t += step
-    if curve_type = 'Hermite':
-        <>
+    if curve_type == 'Hermite':
+        #<>
+        pass
 
 def draw_lines( matrix, screen, color ):
     if len(matrix) < 2:
